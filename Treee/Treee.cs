@@ -42,11 +42,25 @@ namespace BinaryTree
         }
         ~Tree()
         {
+            Clear(Root);
+            Root = null;
 #if DEBUG
             Console.WriteLine($"Tdestructor:\t{GetHashCode()}"); 
 #endif
         }
+        public void Clear()
+        {
+            Clear(Root);
+        }
 
+        void Clear(Element Root) 
+        {
+            if (Root == null) return;
+            Clear(Root.pLeft);
+            Clear(Root.pRight);
+            Root=null;
+            System.GC.WaitForPendingFinalizers();
+        }
         public void Insert(int Data)
         {
             Insert(Data, Root);
@@ -110,15 +124,19 @@ namespace BinaryTree
             return Root == null ? 0 : Sum(Root.pLeft) + Sum(Root.pRight) + Root.Data;
 
         }
+        public int Sum()
+        { 
+            return Sum(Root);
+        }   
 
         public void Print()
         {
             Print(Root);
             Console.WriteLine();
         }
-        public double AVG(Element Root)
+        public double Avg()
         {
-            return Sum(Root) / Count(Root);
+            return (double)Sum(Root) / Count(Root);
         }
 
         public void Print(Element Root)

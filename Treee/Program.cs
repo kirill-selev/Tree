@@ -1,4 +1,4 @@
-﻿//#define TREE_BASE_CHECK
+﻿#define TREE_BASE_CHECK
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,8 +41,8 @@ namespace BinaryTree
                     Console.WriteLine($"MAX значение в дереве{uniqu_tree.Max()}");
                     Console.WriteLine($"Количество элементов дерева {uniqu_tree.Count()}");
                     
-                    Console.WriteLine($"Сумма элементов дерева: {unique_tree.Sum()}");
-				    Console.WriteLine($"Среднее-арифметическое элементов дерева: {unique_tree.Avg()}");
+                    Console.WriteLine($"Сумма элементов дерева: {uniqu_tree.Sum()}");
+				    Console.WriteLine($"Среднее-арифметическое элементов дерева: {uniqu_tree.Avg()}");
                 }
                 catch (Exception ex)
                 {
@@ -52,7 +52,7 @@ namespace BinaryTree
 #endif
 
 
-                //Tree tree = new Tree() { 1,3,4,7,8,0};
+                
             }
         }
     }
