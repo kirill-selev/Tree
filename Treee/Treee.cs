@@ -11,7 +11,7 @@ namespace BinaryTree
     class Tree
     {
 
-        public class Element
+        public class Element 
         {
             public int Data;
             public Element pLeft;
@@ -105,21 +105,21 @@ namespace BinaryTree
             return Count(Root);
         }
 
-        //int Sum(Element Root)
-        //{
-        //    //return Root== null?0: ;
+        int Sum(Element Root)
+        {
+            return Root == null ? 0 : Sum(Root.pLeft) + Sum(Root.pRight) + Root.Data;
 
-        //}
+        }
 
         public void Print()
         {
             Print(Root);
             Console.WriteLine();
         }
-        //public double AVG(Element Root)
-        //{
-        //    //return Sum(Root)/Count(Root);
-        //}
+        public double AVG(Element Root)
+        {
+            return Sum(Root) / Count(Root);
+        }
 
         public void Print(Element Root)
         {
