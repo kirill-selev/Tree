@@ -46,6 +46,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Treee.cs" />
+    <Compile Include="TreePerformens cs.cs" />
     <Compile Include="UniquTree.cs" />
   </ItemGroup>
   <ItemGroup>
